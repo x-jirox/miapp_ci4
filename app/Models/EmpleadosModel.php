@@ -27,4 +27,11 @@ class EmpleadosModel extends Model
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 
+    //consultas personalizadas
+    public function empleadosDepartamento(){
+        return $this->select('empleados.*, departamentos.nombre AS departamento')
+        ->join('departamentos', 'empleados.id_departamento = departamentos.id')
+        ->findAll();
+    }
+
 }
