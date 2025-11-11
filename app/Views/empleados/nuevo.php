@@ -34,7 +34,7 @@
 
                 <div class="col-md-6">
                     <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" value="<?= set_value('correo_electronico')?>">
+                    <input type="email" class="form-control" id="email" name="email" value="<?= set_value('email')?>">
                 </div>
 
                 <div class="col-md-6">
@@ -42,7 +42,7 @@
                     <select class="form-select" id="departamento" name="departamento" required>
                         <option value="">Seleccionar</option>
                         <?php foreach ($departamentos as $departamento): ?>
-                            <option value="<?= $departamento['id'] ?>"><?= esc($departamento['nombre']) ?></option>
+                            <option value="<?= $departamento['id'] ?>"><?= $departamento['nombre']?></option>
                             <?php endforeach; ?>
                             
                     </select>
